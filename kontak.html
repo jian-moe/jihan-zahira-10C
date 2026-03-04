@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak - Profil Usaha Buku</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav> 
+<a href="index.html">Beranda</a>
+<a href="produk.html">Produk</a>
+<a href="bedah-buku.html">Bedah Buku</a>
+<a href="testimoni.html">Testimoni</a>
+<a href="tampil-testimoni.html">Testimoni Pembeli</a>
+<a href="kontak.html">Kontak</a>
+<a href="event.html">Event</a>
+</nav>
+
+<!-- Section Kontak -->
+<section class="kontak">
+  <h2>Kontak Kami</h2>
+  <style>
+  .judul-kontak {
+    text-align: center;
+  }
+</style>
+
+  <div class="kontak-container">
+
+    <!-- Form Kontak -->
+    <div class="card-kontak">
+      <h3>Kirim Pesan</h3>
+      <form id="contactForm">
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Pesan</label>
+        <textarea id="pesan" rows="4" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+
+    <!-- Google Maps -->
+    <div class="card-kontak">
+      <h3>Lokasi Kami</h3>
+      <iframe 
+        src="https://www.google.com/maps?q=Sidoarjo%20Jawa%20Timur&output=embed"
+        width="100%" 
+        height="250"
+        style="border:0;"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- Alamat Toko -->
+    <div class="card-kontak">
+      <h3>Alamat Toko</h3>
+      <p>
+        <strong>Toko Buku Jihan</strong><br>
+        Jl. Besuk RT. 10 RW.04 Desa Sambungrejo<br>
+        Kecamatan Sukodono, Kabupaten Sidoarjo<br>
+        Telepon: +62 12-3056-7345<br>
+        Email: tokobukujihan@gmail.com<br>
+        Jam Operasional: Senin - Sabtu (08.00 - 20.00)
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- JavaScript sederhana untuk form -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Pesan berhasil dikirim!");
+  this.reset();
+});
+</script>
+
+</body>
+</html>
