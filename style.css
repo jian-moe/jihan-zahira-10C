@@ -157,38 +157,39 @@ form button:hover{
   text-align: center;
 }
 
-/* Judul Kontak */
-.kontak-judul h2 {
+.kontak h2 {
   font-size: 2em;
   margin-bottom: 40px;
 }
 
-/* Sub-section: Form, Maps, Alamat */
-.kontak-form,
-.kontak-maps,
-.kontak-alamat {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+/* Container grid untuk kotak-kotak */
+.kontak-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
 }
 
-/* Card Kontak */
-.card-kontak {
+/* Kotak individual */
+.kontak-card {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  max-width: 400px;
   width: 100%;
+  max-width: 400px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card-kontak h3 {
+.kontak-card h3 {
   margin-bottom: 15px;
+  text-align: center;
 }
 
 /* Form input dan textarea */
-.card-kontak form input,
-.card-kontak form textarea {
+.kontak-card form input,
+.kontak-card form textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
@@ -196,8 +197,8 @@ form button:hover{
   border: 1px solid #ccc;
 }
 
-/* Tombol Kirim */
-.card-kontak form button {
+/* Tombol kirim */
+.kontak-card form button {
   padding: 10px 20px;
   background-color: #007BFF;
   color: white;
@@ -206,16 +207,19 @@ form button:hover{
   cursor: pointer;
 }
 
-.card-kontak form button:hover {
+.kontak-card form button:hover {
   background-color: #0056b3;
 }
 
-/* Responsive: tampilan mobile */
+/* Hover efek card */
+.kontak-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive mobile */
 @media (max-width: 768px) {
-  .kontak-form,
-  .kontak-maps,
-  .kontak-alamat {
-    flex-direction: column;
-    align-items: center;
+  .kontak-container {
+    grid-template-columns: 1fr;
   }
 }
