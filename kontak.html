@@ -19,17 +19,13 @@
   <a href="event.html">Event</a>
 </nav>
 
-<!-- Section Kontak -->
 <section class="kontak">
+  <h2>Kontak Kami</h2>
 
-  <!-- Judul Kontak -->
-  <div class="kontak-judul">
-    <h2>Kontak Kami</h2>
-  </div>
+  <div class="kontak-container">
 
-  <!-- Form Kontak -->
-  <div class="kontak-form">
-    <div class="card-kontak">
+    <!-- Kotak Form Kontak -->
+    <section class="kontak-card">
       <h3>Kirim Pesan</h3>
       <form id="contactForm">
         <label>Nama Lengkap</label>
@@ -43,12 +39,10 @@
 
         <button type="submit">Kirim Pesan</button>
       </form>
-    </div>
-  </div>
+    </section>
 
-  <!-- Google Maps -->
-  <div class="kontak-maps">
-    <div class="card-kontak">
+    <!-- Kotak Maps -->
+    <section class="kontak-card">
       <h3>Lokasi Kami</h3>
       <iframe 
         src="https://www.google.com/maps?q=Sidoarjo%20Jawa%20Timur&output=embed"
@@ -57,12 +51,10 @@
         style="border:0;"
         loading="lazy">
       </iframe>
-    </div>
-  </div>
+    </section>
 
-  <!-- Alamat Toko -->
-  <div class="kontak-alamat">
-    <div class="card-kontak">
+    <!-- Kotak Alamat Toko -->
+    <section class="kontak-card">
       <h3>Alamat Toko</h3>
       <p>
         <strong>Toko Buku Jihan</strong><br>
@@ -72,12 +64,12 @@
         Email: tokobukujihan@gmail.com<br>
         Jam Operasional: Senin - Sabtu (08.00 - 20.00)
       </p>
-    </div>
-  </div>
+    </section>
 
+  </div>
 </section>
 
-<!-- JavaScript untuk form -->
+<!-- Form JS -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -85,6 +77,3 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   this.reset();
 });
 </script>
-
-</body>
-</html>
