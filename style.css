@@ -23,7 +23,6 @@ text-align: left;
 line-height: 1.5;
 }
 
-/* Navbar (biar sama seperti event) */
 nav{
 background:#8e7cc3;
 padding:15px;
@@ -181,3 +180,4 @@ height:300px;
 object-fit:cover;
 border-radius:10px;
 }
+
