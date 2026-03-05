@@ -150,76 +150,108 @@ form button:hover{
   object-fit: cover;
 }
 
-/* Section Kontak */
-.kontak {
-  padding: 50px 20px;
-  background-color: #f5f5f5;
-  text-align: center;
+/* Reset dasar */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.kontak h2 {
-  font-size: 2em;
-  margin-bottom: 40px;
+/* Body */
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    line-height:1.6;
 }
 
-/* Container grid untuk kotak-kotak */
-.kontak-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-items: center;
+/* Navbar */
+nav{
+    background:#2c3e50;
+    padding:15px;
+    text-align:center;
 }
 
-/* Kotak individual */
-.kontak-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-.kontak-card h3 {
-  margin-bottom: 15px;
-  text-align: center;
+nav a:hover{
+    color:#f1c40f;
 }
 
-/* Form input dan textarea */
-.kontak-card form input,
-.kontak-card form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+/* Container utama */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
 }
 
-/* Tombol kirim */
-.kontak-card form button {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* Judul */
+h1{
+    text-align:center;
+    margin-bottom:20px;
 }
 
-.kontak-card form button:hover {
-  background-color: #0056b3;
+/* Layout kontak */
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
 }
 
-/* Hover efek card */
-.kontak-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+/* Form */
+.form-box{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Responsive mobile */
-@media (max-width: 768px) {
-  .kontak-container {
-    grid-template-columns: 1fr;
-  }
+form input,
+form textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+form button{
+    background:#27ae60;
+    color:white;
+    border:none;
+    padding:12px;
+    width:100%;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+form button:hover{
+    background:#219150;
+}
+
+/* Map */
+.map{
+    background:white;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+iframe{
+    width:100%;
+    height:300px;
+    border:0;
+    border-radius:5px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+.contact-wrapper{
+grid-template-columns:1fr;
+}
 }
