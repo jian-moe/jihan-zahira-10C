@@ -19,51 +19,142 @@
   <a href="event.html">Event</a>
 </nav>
 
-<!-- Kontak -->
+<title>Profil Usaha Buku</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav> <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="bedah-buku.html">Bedah Buku</a>
+        <a href="testimoni.html">Testimoni</a>
+        <a href="tampil-testimoni.html">Testimoni Pembeli</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="event.html">Event</a>
+    </nav>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Toko Buku Adara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff0f6; /* pink soft */
+            border-radius: 10px;
+            box-shadow: 0 0 15px thistle
+
+        h1 {
+            text-align: center;
+            color: pink;
+        }
+
+        h2 {
+            color: #ffa3d1; /* pink subjudul */
+        }
+
+        .alamat p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ff99cc;
+            font-size: 16px;
+            background-color: #fff0f6;
+        }
+
+        form button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #ff82c1;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ffbbdd;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
 <div class="container">
+    <h1>Kontak Toko Buku Adara</h1>
 
-<h1>Hubungi Kami</h1>
+    <div class="alamat">
+        <h2>Alamat Toko</h2>
+        <p>
+            Jl. Besuk, RT.11/RW.04, Besuk, Sambungrejo,<br>
+            Kecamatan Sukodono, Kabupaten Sidoarjo,<br>
+            Jawa Timur 61258, Indonesia<br>
+            Telepon: +62 822 4169 6699<br>
+            Email: tokobukuadara1@gmail.com
+        </p>
+    </div>
 
-<div class="contact-wrapper">
+  
 
-<!-- Form Kontak -->
-<div class="form-box">
-<h3>Form Kontak</h3>
+    <div class="form-kontak">
+        <h2>Form Kontak</h2>
+        <form id="contactForm">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+            <button type="submit">Kirim Pesan</button>
+            <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
+        </form>
+    </div>
 
-<form>
-<label>Nama</label>
-<input type="text" placeholder="Masukkan nama">
-
-<label>Email</label>
-<input type="email" placeholder="Masukkan email">
-
-<label>Pesan</label>
-<textarea rows="5" placeholder="Tulis pesan..."></textarea>
-
-<button type="submit">Kirim Pesan</button>
-</form>
-
-</div>
-
-<!-- Google Maps -->
-<div class="map">
+    <section class="map">
+<h2>Lokasi Kami</h2>
 
 <iframe 
-src="https://maps.google.com/maps?q=Sidoarjo&t=&z=13&ie=UTF8&iwloc=&output=embed">
+src="https://maps.google.com/maps?q=Pondok%20Pesantren%20Al%20Kautsar%20Sidoarjo&t=&z=15&z=15&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
-<div class="address">
-<b>Alamat:</b><br>
-Pondok Pesantren Al Kautsar<br>
-Sidoarjo, Jawa Timur<br>
-Indonesia
+</section>
 </div>
 
-</div>
 
-</div>
 
-</div>
+<script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Simulasi pengiriman form
+        successMessage.style.display = 'block';
+        form.reset();
+    });
+</script>
 
 </body>
 </html>
+
+
