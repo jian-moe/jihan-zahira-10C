@@ -4,7 +4,154 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Profil Usaha Buku</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Body */
+body{
+background-color:#f6f3ff;
+font-family:'Poppins', Arial, sans-serif;
+color:#333;
+margin:20px;
+}
+
+/* Navbar */
+nav{
+background:#8e7cc3;
+padding:15px;
+text-align:center;
+margin-bottom:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#e6dcff;
+}
+
+/* Judul */
+h1{
+color:#6a5acd;
+text-align:center;
+margin-bottom:20px;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2{
+color:#7b68b2;
+margin-bottom:10px;
+}
+
+p{
+font-size:16px;
+line-height:1.6;
+margin-bottom:10px;
+}
+
+/* Header */
+.header img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:25px;
+}
+
+/* Artikel */
+.daftar-produk{
+margin-bottom:30px;
+}
+
+.artikel{
+max-width:900px;
+margin:auto;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+line-height:1.8;
+}
+
+.penulis{
+font-style:italic;
+color:#777;
+margin-bottom:10px;
+}
+
+/* Sampul buku */
+.sampul{
+width:180px;
+float:right;
+margin:0 0 15px 20px;
+border-radius:6px;
+box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Quote */
+blockquote{
+font-style:italic;
+padding-left:20px;
+margin:20px 0;
+border-left:4px solid #8e7cc3;
+background:#f1edff;
+color:#444;
+}
+
+/* Tombol */
+.btn-kembali{
+display:inline-block;
+margin-top:30px;
+padding:10px 18px;
+background:#8e7cc3;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.btn-kembali:hover{
+background:#6f5cb3;
+}
+
+/* Footer */
+footer{
+margin-top:40px;
+text-align:center;
+padding:15px;
+background:#8e7cc3;
+color:white;
+border-radius:6px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.sampul{
+float:none;
+display:block;
+margin:auto;
+margin-bottom:15px;
+}
+
+.artikel{
+padding:15px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -26,15 +173,14 @@
 </header>
 
 <section class="daftar-produk">
-
-<article class="artikel">
+<main class="artikel">
 <h2>Bedah Buku: Negeri 5 Menara</h2>
 <p class="penulis">Ditulis oleh: Ahmad Fuadi</p>
 
-<img src="https://upload.wikimedia.org/wikipedia/id/thumb/3/34/N5M-POSTER-FIN.jpg/500px-N5M-POSTER-FIN.jpg?20120124071824" class="sampul">
+<img src="https://upload.wikimedia.org/wikipedia/id/thumb/3/34/N5M-POSTER-FIN.jpg/500px-N5M-POSTER-FIN.jpg" class="sampul">
 
 <p>
-Buku ini menceritakan perjalanan hidup Alif, seorang anak Minang yang menempuh pendidikan di pondok pesantren Madani. Awalnya penuh keraguan, namun perjalanan Alif menemukan makna perjuangan, persahabatan, dan kekuatan impian.
+Buku ini menceritakan perjalanan hidup Alif, seorang anak Minang yang menempuh pendidikan di pondok pesantren Madani.
 </p>
 
 <blockquote>
@@ -42,82 +188,69 @@ Buku ini menceritakan perjalanan hidup Alif, seorang anak Minang yang menempuh p
 </blockquote>
 
 <p>
-Kisah yang ditulis berdasarkan pengalaman nyata ini sangat menginspirasi bagi pelajar yang sedang mengejar mimpi mereka.
+Kisah ini sangat menginspirasi bagi pelajar yang sedang mengejar mimpi mereka.
 </p>
-</article>
+</main>
+</section>
 
-
-<article class="artikel">
+<section class="daftar-produk">
+<main class="artikel">
 <h2>Bedah Buku: Edensor</h2>
 <p class="penulis">Ditulis oleh: Andrea Hirata</p>
 
 <img src="https://upload.wikimedia.org/wikipedia/id/e/ec/Edensor_sampul.jpg" class="sampul">
 
 <p>
-Novel Edensor menceritakan perjalanan Ikal dan Arai yang mendapatkan beasiswa Uni Eropa untuk melanjutkan studi di Prancis.
+Novel Edensor menceritakan perjalanan Ikal dan Arai yang mendapatkan beasiswa ke Eropa.
 </p>
 
 <blockquote>
 "Bermimpilah, karena Tuhan akan memeluk mimpi-mimpi itu."
 </blockquote>
+</main>
+</section>
 
-<p>
-Novel ini mengajarkan tentang keberanian bermimpi dan ketekunan dalam meraih cita-cita.
-</p>
-</article>
-
-
-<article class="artikel">
+<section class="daftar-produk">
+<main class="artikel">
 <h2>Bedah Buku: Malioboro at Night</h2>
 <p class="penulis">Ditulis oleh: Skysphire</p>
 
-<img src="https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/picture_meta/2023/4/1/9n7hoatkffndxdtbppb2fm.jpg" class="sampul">
+<img src="https://cdn.gramedia.com/uploads/picture_meta/2023/4/1/9n7hoatkffndxdtbppb2fm.jpg" class="sampul">
 
 <p>
-Novel ini mengisahkan perjalanan emosi Serana dan Janaka yang dipertemukan oleh luka masa lalu.
+Novel ini mengisahkan perjalanan emosi Serana dan Janaka dengan latar kota Yogyakarta.
 </p>
+</main>
+</section>
 
-<blockquote>
-"Tidak semua pertemuan ditakdirkan untuk dimiliki, sebagian hanya untuk dikenang."
-</blockquote>
-
-<p>
-Cerita romantis reflektif dengan latar Kota Yogyakarta yang penuh suasana emosional.
-</p>
-</article>
-
-
-<article class="artikel">
+<section class="daftar-produk">
+<main class="artikel">
 <h2>Bedah Novel: Wee!!</h2>
 <p class="penulis">Ditulis oleh: Skysphire</p>
 
 <img src="https://img.wattpad.com/cover/313002278-256-k758861.jpg" class="sampul">
 
 <p>
-Novel ini mengisahkan kehidupan remaja dengan cerita ringan, hangat, dan penuh emosi tentang persahabatan dan cinta pertama.
+Novel ini menceritakan kehidupan remaja dengan cerita ringan dan hangat.
 </p>
-</article>
+</main>
+</section>
 
-
-<article class="artikel">
+<section class="daftar-produk">
+<main class="artikel">
 <h2>Bedah Novel: To Kill a Mockingbird</h2>
 <p class="penulis">Ditulis oleh: Harper Lee</p>
 
 <img src="https://ebooks.gramedia.com/ebook-covers/25313/image_highres/HCO_TKAM2018MTH11.jpeg" class="sampul">
 
 <p>
-Novel klasik yang membahas isu rasisme, keadilan, dan moralitas melalui sudut pandang seorang anak bernama Scout Finch.
+Novel klasik tentang keadilan dan empati dalam masyarakat Amerika.
 </p>
 
 <blockquote>
 "You never really understand a person until you consider things from his point of view."
 </blockquote>
-
-<p>
-Karya klasik dengan pesan moral kuat yang relevan sepanjang masa.
-</p>
-</article>
-
+</main>
 </section>
 
 <a href="produk.html" class="btn-kembali">Kembali ke Katalog</a>
