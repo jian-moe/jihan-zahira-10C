@@ -150,108 +150,65 @@ form button:hover{
   object-fit: cover;
 }
 
-/* Reset dasar */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink
+        }
 
-/* Body */
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
-    line-height:1.6;
-}
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff0f6; /* pink soft */
+            border-radius: 10px;
+            box-shadow: 0 0 15px thistle
 
-/* Navbar */
-nav{
-    background:#2c3e50;
-    padding:15px;
-    text-align:center;
-}
+        h1 {
+            text-align: center;
+            color: pink;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
+        h2 {
+            color: #ffa3d1; /* pink subjudul */
+        }
 
-nav a:hover{
-    color:#f1c40f;
-}
+        .alamat p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
 
-/* Container utama */
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:20px;
-}
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ff99cc;
+            font-size: 16px;
+            background-color: #fff0f6;
+        }
 
-/* Judul */
-h1{
-    text-align:center;
-    margin-bottom:20px;
-}
+        form button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #ff82c1;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
 
-/* Layout kontak */
-.contact-wrapper{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
+        form button:hover {
+            background-color: #ffbbdd;
+        }
 
-/* Form */
-.form-box{
-    background:white;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-form input,
-form textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
-
-form button{
-    background:#27ae60;
-    color:white;
-    border:none;
-    padding:12px;
-    width:100%;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-form button:hover{
-    background:#219150;
-}
-
-/* Map */
-.map{
-    background:white;
-    padding:10px;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-iframe{
-    width:100%;
-    height:300px;
-    border:0;
-    border-radius:5px;
-}
-
-/* Responsive */
-@media(max-width:768px){
-.contact-wrapper{
-grid-template-columns:1fr;
-}
-}
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>s
