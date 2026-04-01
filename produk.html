@@ -3,71 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profil Usaha Buku</title>
-<link rel="stylesheet" href="style.css" />
+<title>Toko Buku</title>
+
+<style>
+
+/* Body */
+body{
+background: linear-gradient(to bottom, #dff6ff, #b3e0ff);
+font-family:'Poppins', sans-serif;
+margin:20px;
+}
+
+/* Navbar */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.nav-menu{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.nav-group{
+background: rgba(0,119,182,0.6);
+padding:8px 12px;
+border-radius:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 8px;
+font-weight:bold;
+}
+
+/* Cart */
+.cart{
+background:#0077b6;
+color:white;
+padding:10px 15px;
+border-radius:10px;
+font-weight:bold;
+}
+
+/* Produk */
+.daftar-produk{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.produk{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,119,182,0.2);
+text-align:center;
+transition:0.3s;
+}
+
+.produk:hover{
+transform:translateY(-8px);
+}
+
+.produk img{
+width:150px;
+}
+
+/* Rating */
+.rating{
+color:gold;
+margin:5px 0;
+}
+
+/* Button */
+button{
+background:#0077b6;
+color:white;
+border:none;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
+}
+
+</style>
+
 </head>
+
 <body>
-<nav> 
-<a href="index.html">Beranda</a>
-<a href="produk.html">Produk</a>
-<a href="bedah-buku.html">Bedah Buku</a>
-<a href="testimoni.html">Testimoni</a>
-<a href="tampil-testimoni.html">Testimoni Pembeli</a>
- <a href="kontak.html">Kontak</a>
-    <a href="event.html">Event</a>
+
+<nav>
+<div class="nav-menu">
+<div class="nav-group"><a href="#">Beranda</a></div>
+<div class="nav-group"><a href="#">Produk</a></div>
+<div class="nav-group"><a href="#">Kontak</a></div>
+</div>
+
+<div class="cart">
+🛒 Keranjang: <span id="cartCount">0</span>
+</div>
 </nav>
 
- <header>
-        <img src="header.jfif" alt="header" width="1500" height="360">
-    </header>
- 
 <h1>Daftar Produk Buku</h1>
-<section class="daftar-produk"> 
+
+<section class="daftar-produk">
+
 <div class="produk">
-<img src="buku 1.jpg" alt="Edensor" width="150"/>
+<img src="buku 1.jpg">
 <h2>Edensor</h2>
-<p class="harga">Rp75.000</p>
-<p class="deskripsi">Edensor adalah buku ketiga dari Tetralogi Laskar Pelangi karya Andrea Hirata yang diterbitkan oleh Bentang Pustaka pada bulan Mei tahun 2007. Buku berikutnya dan yang terakhir adalah Maryamah Karpov. Edensor masuk nominasi penghargaan nasional sastra KLA (Khatulistiwa Literary Award) tahun 2007.</p>
-</div>
- 
-<div class="produk">
-<img src="buku 2.avif" alt="Malioboro" width="150"/>
-<h2>Malioboro at Night</h2>
-<p class="harga">Rp89.000</p>
-<p class="deskripsi">Malioboro at Night adalah novel karya Skysphire yang mengangkat kisah cinta, luka masa lalu, dan proses berdamai dengan diri sendiri. Cerita berfokus pada Serana, seorang perempuan yang masih terjebak dalam kenangan dan rasa sakit akibat hubungan di masa lalunya. Pertemuannya dengan Janaka, laki-laki yang tenang dan penuh perhatian, perlahan membuka kembali harapan yang sempat ia tutup rapat.
-
-Latar Malioboro di malam hari menjadi simbol kehangatan, keramaian, sekaligus kesepian—tempat di mana perasaan-perasaan yang terpendam akhirnya menemukan ruang untuk diungkapkan. Novel ini tidak hanya bercerita tentang jatuh cinta, tetapi juga tentang kehilangan, penerimaan, dan keberanian untuk memulai kembali.
-
-Dengan bahasa yang puitis dan emosional, Malioboro at Night cocok untuk pembaca yang menyukai romance mellow, cerita reflektif, dan kisah yang dekat dengan realitas perasaan manusia.</p>
+<div class="rating">⭐⭐⭐⭐☆</div>
+<p>Rp75.000</p>
+<button onclick="addToCart()">Tambah ke Keranjang</button>
 </div>
 
 <div class="produk">
-<img src="buku 3.jpg" alt="Wee!!" width="150"/>
+<img src="buku 2.avif">
+<h2>Malioboro</h2>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<p>Rp89.000</p>
+<button onclick="addToCart()">Tambah ke Keranjang</button>
+</div>
+
+<div class="produk">
+<img src="buku 3.jpg">
 <h2>Wee!!</h2>
-<p class="harga">Rp75.000</p>
-<p class="deskripsi"> 
-    Wee!!! adalah novel bergenre romance dan slice of life yang mengisahkan kehidupan remaja dengan cerita ringan dan hangat. Novel ini menampilkan persahabatan, kisah cinta yang tumbuh perlahan, serta konflik sehari-hari yang dekat dengan kehidupan pembaca. Cerita dan dialognya yang natural membuat Wee!!! mudah dinikmati dan berkesan.
-</p>
+<div class="rating">⭐⭐⭐⭐☆</div>
+<p>Rp75.000</p>
+<button onclick="addToCart()">Tambah ke Keranjang</button>
 </div>
 
-<div class="produk">
-  <img src="buku 4.jpeg" alt="To Kill a Mockingbird" width="150"/>
-  <h2>To Kill a Mockingbird</h2>
-  <p class="harga">Rp250.000</p>
-  <p class="deskripsi">
-    To Kill a Mockingbird adalah novel klasik karya Harper Lee bergenre drama dan coming-of-age. 
-    Berlatar di Amerika Serikat bagian Selatan, cerita ini mengikuti kehidupan Scout Finch 
-    dan ayahnya, Atticus Finch, seorang pengacara yang membela pria kulit hitam yang dituduh 
-    melakukan kejahatan serius. Novel ini mengangkat tema keadilan, rasisme, moralitas, 
-    dan empati yang tetap relevan hingga saat ini.
-  </p>
-</div>
-
-<p style="text-align: center;">
-    <a href="index.html">Kembali ke Beranda</a></p>
 </section>
+
+<script>
+let count = 0;
+
+function addToCart(){
+count++;
+document.getElementById("cartCount").innerText = count;
+}
+</script>
+
 </body>
 </html>
-
-
-
