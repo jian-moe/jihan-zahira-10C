@@ -44,57 +44,41 @@ from{transform:translateY(40px); opacity:0;}
 to{transform:translateY(0); opacity:1;}
 }
 
-/* NAVBAR AESTHETIC */
+/* NAVBAR KELOMPOK */
 nav{
-position:sticky;
-top:0;
-z-index:1000;
-padding:15px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
 margin-bottom:25px;
-border-radius:15px;
-
-background: rgba(0, 119, 182, 0.6);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-
-box-shadow:0 8px 25px rgba(0,119,182,0.3);
 animation: slideDown 1s ease;
 }
 
-/* link container */
+/* Grup menu */
+.nav-group{
+background: rgba(0, 119, 182, 0.6);
+backdrop-filter: blur(12px);
+padding:10px 15px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,119,182,0.25);
+}
+
+/* Link */
 nav a{
-position:relative;
 color:white;
 text-decoration:none;
-margin:0 18px;
+margin:0 10px;
 font-weight:bold;
-padding:8px 12px;
+padding:6px 10px;
 border-radius:8px;
-transition: all 0.3s ease;
-}
-
-/* efek glow hover */
-nav a:hover{
-background: rgba(255,255,255,0.2);
-color:#caf0f8;
-transform: translateY(-2px);
-box-shadow:0 4px 15px rgba(255,255,255,0.3);
-}
-
-/* garis animasi bawah */
-nav a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:0;
-width:0%;
-height:2px;
-background:#caf0f8;
 transition:0.3s;
 }
 
-nav a:hover::after{
-width:100%;
+/* Hover */
+nav a:hover{
+background: rgba(255,255,255,0.25);
+color:#caf0f8;
+transform: translateY(-2px);
 }
 
 /* Judul */
@@ -155,7 +139,7 @@ color:#666;
 margin-bottom:10px;
 }
 
-/* Sampul buku */
+/* Sampul */
 .sampul{
 width:180px;
 float:right;
@@ -176,7 +160,6 @@ padding-left:20px;
 margin:20px 0;
 border-left:4px solid #00b4d8;
 background:#e0f7ff;
-color:#444;
 }
 
 /* Tombol */
@@ -193,7 +176,6 @@ transition:0.3s;
 
 .btn-kembali:hover{
 transform:scale(1.05);
-background: linear-gradient(to right, #005f8f, #0096c7);
 }
 
 /* Footer */
@@ -206,39 +188,31 @@ color:white;
 border-radius:8px;
 }
 
-/* Responsive */
-@media(max-width:768px){
-.sampul{
-float:none;
-display:block;
-margin:auto;
-margin-bottom:15px;
-}
-
-.artikel{
-padding:15px;
-}
-
-nav a{
-display:inline-block;
-margin:8px;
-}
-}
-
 </style>
 
 </head>
 
 <body>
 
-<nav> 
+<nav>
+<div class="nav-group">
 <a href="index.html">Beranda</a>
+</div>
+
+<div class="nav-group">
 <a href="produk.html">Produk</a>
 <a href="bedah-buku.html">Bedah Buku</a>
+</div>
+
+<div class="nav-group">
 <a href="testimoni.html">Testimoni</a>
 <a href="tampil-testimoni.html">Testimoni Pembeli</a>
+</div>
+
+<div class="nav-group">
 <a href="kontak.html">Kontak</a>
 <a href="event.html">Event</a>
+</div>
 </nav>
 
 <h1>Toko Buku Jihan</h1>
@@ -247,26 +221,16 @@ margin:8px;
 <img src="header.jfif" alt="header">
 </header>
 
-<!-- (ISI KAMU TETAP SAMA, TIDAK DIUBAH) -->
+<!-- ISI TETAP SAMA -->
 
 <section class="daftar-produk">
 <main class="artikel">
 <h2>Bedah Buku: Negeri 5 Menara</h2>
 <p class="penulis">Ditulis oleh: Ahmad Fuadi</p>
-
 <img src="https://upload.wikimedia.org/wikipedia/id/thumb/3/34/N5M-POSTER-FIN.jpg/500px-N5M-POSTER-FIN.jpg" class="sampul">
-
-<p>
-Buku ini menceritakan perjalanan hidup Alif, seorang anak Minang yang menempuh pendidikan di pondok pesantren Madani.
-</p>
-
-<blockquote>
-"Man Jadda Wajada - Siapa yang bersungguh-sungguh, dia akan berhasil."
-</blockquote>
-
-<p>
-Kisah ini sangat menginspirasi bagi pelajar yang sedang mengejar mimpi mereka.
-</p>
+<p>Buku ini menceritakan perjalanan hidup Alif, seorang anak Minang yang menempuh pendidikan di pondok pesantren Madani.</p>
+<blockquote>"Man Jadda Wajada - Siapa yang bersungguh-sungguh, dia akan berhasil."</blockquote>
+<p>Kisah ini sangat menginspirasi bagi pelajar yang sedang mengejar mimpi mereka.</p>
 </main>
 </section>
 
@@ -274,16 +238,9 @@ Kisah ini sangat menginspirasi bagi pelajar yang sedang mengejar mimpi mereka.
 <main class="artikel">
 <h2>Bedah Buku: Edensor</h2>
 <p class="penulis">Ditulis oleh: Andrea Hirata</p>
-
 <img src="https://upload.wikimedia.org/wikipedia/id/e/ec/Edensor_sampul.jpg" class="sampul">
-
-<p>
-Novel Edensor menceritakan perjalanan Ikal dan Arai yang mendapatkan beasiswa ke Eropa.
-</p>
-
-<blockquote>
-"Bermimpilah, karena Tuhan akan memeluk mimpi-mimpi itu."
-</blockquote>
+<p>Novel Edensor menceritakan perjalanan Ikal dan Arai yang mendapatkan beasiswa ke Eropa.</p>
+<blockquote>"Bermimpilah, karena Tuhan akan memeluk mimpi-mimpi itu."</blockquote>
 </main>
 </section>
 
@@ -291,12 +248,8 @@ Novel Edensor menceritakan perjalanan Ikal dan Arai yang mendapatkan beasiswa ke
 <main class="artikel">
 <h2>Bedah Buku: Malioboro at Night</h2>
 <p class="penulis">Ditulis oleh: Skysphire</p>
-
 <img src="https://cdn.gramedia.com/uploads/picture_meta/2023/4/1/9n7hoatkffndxdtbppb2fm.jpg" class="sampul">
-
-<p>
-Novel ini mengisahkan perjalanan emosi Serana dan Janaka dengan latar kota Yogyakarta.
-</p>
+<p>Novel ini mengisahkan perjalanan emosi Serana dan Janaka dengan latar kota Yogyakarta.</p>
 </main>
 </section>
 
@@ -304,12 +257,8 @@ Novel ini mengisahkan perjalanan emosi Serana dan Janaka dengan latar kota Yogya
 <main class="artikel">
 <h2>Bedah Novel: Wee!!</h2>
 <p class="penulis">Ditulis oleh: Skysphire</p>
-
 <img src="https://img.wattpad.com/cover/313002278-256-k758861.jpg" class="sampul">
-
-<p>
-Novel ini menceritakan kehidupan remaja dengan cerita ringan dan hangat.
-</p>
+<p>Novel ini menceritakan kehidupan remaja dengan cerita ringan dan hangat.</p>
 </main>
 </section>
 
@@ -317,16 +266,9 @@ Novel ini menceritakan kehidupan remaja dengan cerita ringan dan hangat.
 <main class="artikel">
 <h2>Bedah Novel: To Kill a Mockingbird</h2>
 <p class="penulis">Ditulis oleh: Harper Lee</p>
-
 <img src="https://ebooks.gramedia.com/ebook-covers/25313/image_highres/HCO_TKAM2018MTH11.jpeg" class="sampul">
-
-<p>
-Novel klasik tentang keadilan dan empati dalam masyarakat Amerika.
-</p>
-
-<blockquote>
-"You never really understand a person until you consider things from his point of view."
-</blockquote>
+<p>Novel klasik tentang keadilan dan empati dalam masyarakat Amerika.</p>
+<blockquote>"You never really understand a person until you consider things from his point of view."</blockquote>
 </main>
 </section>
 
