@@ -1,1 +1,187 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
+/* BODY */
+body {
+background: linear-gradient(to bottom, #dff6ff, #b3e0ff);
+font-family: 'Poppins', Arial, sans-serif;
+color: #033e6b;
+margin: 20px;
+animation: fadeIn 1.5s ease-in;
+}
+
+/* ANIMASI */
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* JUDUL */
+h1 {
+color: #0077b6;
+text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+color: #0096c7;
+text-align: left;
+}
+
+p {
+font-size: 18px;
+line-height: 1.5;
+}
+
+/* PRODUK GRID */
+.daftar-produk {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap: 20px;
+padding: 20px;
+}
+
+/* CARD PRODUK */
+.produk {
+background-color: #ffffff;
+border: 1px solid #caf0f8;
+padding: 15px;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 6px 15px rgba(0,119,182,0.2);
+transition: 0.3s;
+}
+
+.produk:hover{
+transform: translateY(-8px) scale(1.03);
+box-shadow: 0 10px 25px rgba(0,119,182,0.35);
+}
+
+/* GAMBAR */
+.produk img {
+width: 150px;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+
+/* TEXT PRODUK */
+.produk h2 {
+font-size: 20px;
+color: #0077b6;
+}
+
+.produk h3 {
+font-size: 16px;
+color: #444;
+}
+
+.harga {
+font-weight: bold;
+color: #0096c7;
+}
+
+.deskripsi {
+font-size: 14px;
+color: #555;
+}
+
+/* ARTIKEL */
+.artikel {
+max-width: 700px;
+margin: auto;
+padding: 20px;
+background-color: #ffffff;
+font-family: 'Georgia', serif;
+line-height: 1.8;
+border-radius: 12px;
+box-shadow: 0 6px 15px rgba(0,119,182,0.2);
+}
+
+.artikel .penulis {
+font-style: italic;
+color: #666;
+margin-bottom: 20px;
+}
+
+.artikel .sampul {
+width: 180px;
+float: right;
+margin: 0 0 20px 20px;
+border: 1px solid #ccc;
+box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.artikel blockquote {
+font-style: italic;
+padding-left: 20px;
+margin: 20px 0;
+border-left: 4px solid #00b4d8;
+color: #444;
+background-color: #eaf8ff;
+}
+
+/* BUTTON */
+.btn-kembali {
+display: inline-block;
+margin-top: 30px;
+padding: 10px 16px;
+background: linear-gradient(to right, #0077b6, #00b4d8);
+color: white;
+text-decoration: none;
+border-radius: 8px;
+transition: 0.3s;
+}
+
+.btn-kembali:hover {
+transform: scale(1.05);
+}
+
+/* FORM */
+.formulir{
+max-width: 600px;
+margin: auto;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 12px;
+box-shadow: 0 6px 15px rgba(0,119,182,0.2);
+}
+
+form label {
+display: block;
+margin-top: 10px;
+font-weight: bold;
+}
+
+form input, form select, form textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+margin-bottom: 15px;
+border-radius: 8px;
+border: 1px solid #90e0ef;
+}
+
+form button {
+background: linear-gradient(to right, #0077b6, #00b4d8);
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+
+form button:hover {
+transform: scale(1.05);
+}
+
+/* HEADER */
+.header img {
+width: 100%;
+height: 300px;
+object-fit: cover;
+border-radius: 12px;
+}
