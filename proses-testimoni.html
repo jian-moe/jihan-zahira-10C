@@ -3,30 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profil Usaha Buku</title>
-<link rel="stylesheet" href="style.css" />
+<title>Konfirmasi Testimoni</title>
+
+<style>
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Body */
+body{
+background: linear-gradient(to bottom, #dff6ff, #b3e0ff);
+font-family:'Poppins', Arial, sans-serif;
+color:#033e6b;
+margin:20px;
+animation: fadeIn 1.5s ease-in;
+}
+
+/* Animasi */
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes slideDown{
+from{transform:translateY(-30px); opacity:0;}
+to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes zoomIn{
+from{transform:scale(0.8); opacity:0;}
+to{transform:scale(1); opacity:1;}
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-bottom:25px;
+animation: slideDown 1s ease;
+}
+
+.nav-group{
+background: rgba(0, 119, 182, 0.6);
+backdrop-filter: blur(12px);
+padding:10px 15px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,119,182,0.25);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+padding:6px 10px;
+border-radius:8px;
+transition:0.3s;
+}
+
+nav a:hover{
+background: rgba(255,255,255,0.25);
+color:#caf0f8;
+transform: translateY(-2px);
+}
+
+/* Container */
+.konfirmasi{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,119,182,0.25);
+animation: zoomIn 1s ease;
+}
+
+/* Icon sukses */
+.success-icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+/* Judul */
+.konfirmasi h1{
+margin-bottom:15px;
+color:#0077b6;
+}
+
+/* Link */
+.konfirmasi a{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background: linear-gradient(to right, #0077b6, #00b4d8);
+color:white;
+text-decoration:none;
+border-radius:10px;
+transition:0.3s;
+}
+
+.konfirmasi a:hover{
+transform:scale(1.05);
+}
+
+/* Footer */
+footer{
+margin-top:40px;
+text-align:center;
+padding:15px;
+background: linear-gradient(to right, #0077b6, #00b4d8);
+color:white;
+border-radius:10px;
+}
+
+</style>
+
 </head>
+
 <body>
-<nav> 
+
+<nav>
+<div class="nav-group">
 <a href="index.html">Beranda</a>
+</div>
+
+<div class="nav-group">
 <a href="produk.html">Produk</a>
 <a href="bedah-buku.html">Bedah Buku</a>
+</div>
+
+<div class="nav-group">
 <a href="testimoni.html">Testimoni</a>
 <a href="tampil-testimoni.html">Testimoni Pembeli</a>
-    <a href="kontak.html">Kontak</a>
-    <a href="event.html">Event</a>
+</div>
+
+<div class="nav-group">
+<a href="kontak.html">Kontak</a>
+<a href="event.html">Event</a>
+</div>
 </nav>
+
 <main class="konfirmasi">
-    <h1>Terima Kasih!</h1>
-    <h1>Testimoni Anda telah berhasil dikirim.</h1>
-    <h1><a href="tampil-testimoni.html">Lihat testimoni yang sudah di input -> </a></h1>
-    <section class="testimoni-terkirim"></section>
-    <a href="testimoni.html">Kirim Testimoni Lain</a>
+
+<div class="success-icon">🎉</div>
+
+<h1>Terima Kasih!</h1>
+<h1>Testimoni Anda telah berhasil dikirim.</h1>
+
+<a href="tampil-testimoni.html">
+Lihat testimoni yang sudah di input →
+</a>
+
+<br><br>
+
+<a href="testimoni.html">
+Kirim Testimoni Lain
+</a>
+
 </main>
 
 <footer>
-    <p>&copy;2026 Toko Buku Jihan</p>
+<p>&copy;2026 Toko Buku Jihan</p>
 </footer>
-</body>
 
+</body>
 </html>
