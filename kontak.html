@@ -4,82 +4,224 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kontak - Profil Usaha Buku</title>
-<link rel="stylesheet" href="style.css" />
+
+<style>
+
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Body */
+body{
+background: linear-gradient(to bottom, #dff6ff, #b3e0ff);
+font-family:'Poppins', Arial, sans-serif;
+color:#033e6b;
+margin:20px;
+animation: fadeIn 1.5s ease-in;
+}
+
+/* Animasi */
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes slideDown{
+from{transform:translateY(-30px); opacity:0;}
+to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes fadeUp{
+from{transform:translateY(40px); opacity:0;}
+to{transform:translateY(0); opacity:1;}
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-bottom:25px;
+animation: slideDown 1s ease;
+}
+
+.nav-group{
+background: rgba(0, 119, 182, 0.6);
+backdrop-filter: blur(12px);
+padding:10px 15px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,119,182,0.25);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+padding:6px 10px;
+border-radius:8px;
+transition:0.3s;
+}
+
+nav a:hover{
+background: rgba(255,255,255,0.25);
+color:#caf0f8;
+transform: translateY(-2px);
+}
+
+/* Container */
+.container{
+max-width:900px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,119,182,0.2);
+animation: fadeUp 1s ease;
+}
+
+/* Judul */
+h1{
+text-align:center;
+color:#0077b6;
+margin-bottom:20px;
+}
+
+h2{
+color:#0096c7;
+margin-bottom:10px;
+}
+
+/* Alamat */
+.alamat{
+margin-bottom:25px;
+line-height:1.6;
+}
+
+/* Form */
+.form-kontak input,
+.form-kontak textarea{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #90e0ef;
+}
+
+.form-kontak button{
+background: linear-gradient(to right, #0077b6, #00b4d8);
+color:white;
+padding:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.form-kontak button:hover{
+transform:scale(1.05);
+}
+
+/* Pesan sukses */
+.success-message{
+display:none;
+color:green;
+margin-top:10px;
+font-weight:bold;
+}
+
+/* Map */
+.map iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+margin-top:15px;
+}
+
+/* Hover efek */
+.container:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,119,182,0.35);
+}
+
+</style>
+
 </head>
+
 <body>
-  
-<nav> 
-  <a href="index.html">Beranda</a>
-  <a href="produk.html">Produk</a>
-  <a href="bedah-buku.html">Bedah Buku</a>
-  <a href="testimoni.html">Testimoni</a>
-  <a href="tampil-testimoni.html">Testimoni Pembeli</a>
-  <a href="kontak.html">Kontak</a>
-  <a href="event.html">Event</a>
+
+<nav>
+<div class="nav-group">
+<a href="index.html">Beranda</a>
+</div>
+
+<div class="nav-group">
+<a href="produk.html">Produk</a>
+<a href="bedah-buku.html">Bedah Buku</a>
+</div>
+
+<div class="nav-group">
+<a href="testimoni.html">Testimoni</a>
+<a href="tampil-testimoni.html">Testimoni Pembeli</a>
+</div>
+
+<div class="nav-group">
+<a href="kontak.html">Kontak</a>
+<a href="event.html">Event</a>
+</div>
 </nav>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak Toko Buku Jihan</title>
-  
-</head>
-<body>
 
 <div class="container">
-    <h1>Kontak Toko Buku Jihan</h1>
+<h1>Kontak Toko Buku Jihan</h1>
 
-    <div class="alamat">
-        <h2>Alamat Toko</h2>
-        <p>
-            Jl. Besuk, RT.11/RW.04, Besuk, Sambungrejo,<br>
-            Kecamatan Sukodono, Kabupaten Sidoarjo,<br>
-            Jawa Timur 61258, Indonesia<br>
-            Telepon: +62 822 4169 6699<br>
-            Email: tokobukujianmyo@gmail.com
-        </p>
-    </div>
+<div class="alamat">
+<h2>Alamat Toko</h2>
+<p>
+Jl. Besuk, RT.11/RW.04, Besuk, Sambungrejo,<br>
+Kecamatan Sukodono, Kabupaten Sidoarjo,<br>
+Jawa Timur 61258, Indonesia<br>
+Telepon: +62 822 4169 6699<br>
+Email: tokobukujianmyo@gmail.com
+</p>
+</div>
 
-  
+<div class="form-kontak">
+<h2>Form Kontak</h2>
+<form id="contactForm">
+<input type="text" name="nama" placeholder="Nama Anda" required>
+<input type="email" name="email" placeholder="Email Anda" required>
+<textarea name="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+<button type="submit">Kirim Pesan</button>
+<p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
+</form>
+</div>
 
-    <div class="form-kontak">
-        <h2>Form Kontak</h2>
-        <form id="contactForm">
-            <input type="text" name="nama" placeholder="Nama Anda" required>
-            <input type="email" name="email" placeholder="Email Anda" required>
-            <textarea name="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
-            <button type="submit">Kirim Pesan</button>
-            <p class="success-message" id="successMessage">Pesan berhasil dikirim!</p>
-        </form>
-    </div>
-
-    <section class="map">
+<section class="map">
 <h2>Lokasi Kami</h2>
 
 <iframe 
-src="https://maps.google.com/maps?q=Pondok%20Pesantren%20Al%20Kautsar%20Sidoarjo&t=&z=15&z=15&ie=UTF8&iwloc=&output=embed">
+src="https://maps.google.com/maps?q=Pondok%20Pesantren%20Al%20Kautsar%20Sidoarjo&t=&z=15&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
 </section>
+
 </div>
 
-
-
 <script>
-    const form = document.getElementById('contactForm');
-    const successMessage = document.getElementById('successMessage');
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Simulasi pengiriman form
-        successMessage.style.display = 'block';
-        form.reset();
-    });
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+successMessage.style.display = 'block';
+form.reset();
+});
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
